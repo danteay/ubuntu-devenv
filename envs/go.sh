@@ -1,4 +1,9 @@
 #!/bin/bash
 
-echo "Installing Go environment..."
-sleep 1
+echo "[y] Installing Golang environment... [y/n]:"
+read -r option
+
+if [ "$option" = "n" ]; then
+	exit 0
+fi
+

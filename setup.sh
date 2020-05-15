@@ -27,14 +27,14 @@ sudo apt install \
 cp $(pwd)/configs/.gitignore $HOME/.gitignore
 
 
-if ! [ -x "$(command -v jq)" ]; then
+if [ -x "$(command -v jq)" ]; then
 	wget https://github.com/stedolan/jq/releases/download/jq-1.6/jq-linux64
 	sudo mv ./jq-linux64 /usr/local/bin && chmod +x /usr/local/bin/jq
 fi
 
 
 
-if ! [ -x "$(command -v zsh))" ]; then
+if [ -x "$(command -v zsh))" ]; then
 	echo "Setup zsh..."
 	sleep 1
 
